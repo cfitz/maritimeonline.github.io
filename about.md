@@ -1,33 +1,34 @@
 ---
 layout: page
 permalink: /about/
-title: About the Jekyll Theme
-tags: [Jekyll, theme, simple, minimal, minimalism, responsive]
-modified: 2013-09-13
+title: About Our Library 
+tags: [library]
+modified: 2014-06-28
 image:
-  feature: so-simple-sample-image-4.jpg
-  credit: Michael Rose
+  feature: underwater-nature-ocean-sea.jpg 
   creditlink: http://mademistakes.com
 ---
+The WMU Library houses more twenty thousand print titles pertinent to the study
+of maritime affairs. Additionally, the library subscribes to several major
+databases and full-text journals offering online access to tens of thousands
+more titles.
 
-Looking for a simple, responsive, theme for your Jekyll powered blog? Well look no further. Here be **So Simple Theme**, the followup to [**Minimal Mistakes**](http://mmistakes.github.io/minimal-mistakes) --- by designer slash illustrator [Michael Rose](http://mademistakes).
+The library circulates most of the material in its physical inventory.
+Borrowing privileges are reserved for WMU students, faculty and staff, and
+members of the WMU Board of Governors. Temporary borrowing privileges to
+outside researchers may be extended at the discretion of the librarian.
 
-## So Simple Theme is all about:
+Access to the library's catalogue is available to all users via the world wide
+web. Access to the library's online databases and journals is generally
+reserved for members of the WMU community.
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 9+ and all modern browsers.
-* Minimal embellishments and subtle animations. 
-* Readable typography to make your words shine.
-* Support for large images to call out your favorite posts.
-* Disqus comments if you choose to enable.
-* Simple and clear permalink structure[^1].
-* Tags for [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) for a better social sharing experience.
-* Vanilla [custom 404 page]({{ site.url }}/404.html) to get you started.
-* Stylesheets for Pygments and Coderay [syntax highlighting](http://mmistakes.github.io/articles/so-simple-theme/code-highlighting-post/) to make your code examples look snazzy.
-* Simple search that overlays results based on post title.
-* [Grunt build script]({{ site.url }}/theme-setup/index.html#theme-development) for easier theme development.
-* [Sitemap](https://github.com/mmistakes/so-simple-theme/blob/master/sitemap.xml) for search engines
+For more information, please see our Library policies.
 
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install Minimal Mistakes Theme</a>
+Normal opening hours are:
 
-[^1]: Example: *domain.com/category-name/post-title*
+Mon - Thur: 08.30 - 17.00
+Fri: 08.30 - 16.00
+
+On days preceding Swedish national holidays (Red Days), the library closes at
+15.00. Advance notice will be given in this space when there are temporary
+changes to the schedule.

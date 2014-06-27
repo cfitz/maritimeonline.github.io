@@ -27,3 +27,13 @@ $('#site-nav').click(function(event){
 $(function() {
 	$("article").fitVids();
 });
+
+$('.searching a').bind('click', function(event) { 
+  event.preventDefault();  
+  jQuery('.searchForm').hide();
+  var form = jQuery(this).data('form');
+  form = "#" + form;
+  jQuery(form).show() 
+  jQuery('.searching a').toggleClass('disabled');  
+});
+

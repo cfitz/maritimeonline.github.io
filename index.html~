@@ -35,7 +35,7 @@ null);
 
       <div id="libraryCatalogForm" class='searchForm'>
 
-	<form name="searchform" method="get" action="https://catalog.wmu.se/cgi-bin/koha/opac-search.pl" id="searchform">
+	<form name="searchform" method="get" action="http://catalog.wmu.se/cgi-bin/koha/opac-search.pl" id="searchform">
 	<fieldset class="find-field-controls">	
 	<div class="find-field-inputs">
 		<div class="find-field-inputs-row">
