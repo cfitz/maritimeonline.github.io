@@ -30,7 +30,7 @@ $(function() {
 
 $('.searching a').bind('click', function(event) { 
   event.preventDefault();  
-  jQuery('.searchForm').hide();
+  jQuery('.home-search-form').hide();
   var form = jQuery(this).data('form');
   form = "#" + form;
   jQuery(form).show() 

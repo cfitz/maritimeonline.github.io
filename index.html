@@ -4,54 +4,34 @@ title: ""
 description: "A simple and clean responsive Jekyll theme for words and photos."
 tags: [Jekyll, theme, themes, responsive, blog, minimalism]
 ---
-<link rel="stylesheet" type="text/css" href="http://smallcontent.ebsco-content.com/interfacefiles/14.2.0.66.1/css/_layout2/findfieldlinkscontrol.css" media="All" />
 
-<script>
-var lngFolderCount=0;
-var ep = {"version":"14.2.0.66","baseImagePath":"http://smallcontent.ebsco-content.com/interfacefiles/14.2.0.66.1/","brandingPath":"http://imageserver.ebscohost.com/branding/","interfaceId":"eds","cssLayout":2,"messages":{"Close":"Close","Loading":"Loading","show_this_area":"Show this area","hide_this_area":"Hide this area","folderHasItemsTitle":"Folder has items","folderHasNoItemsTitle":"Folder is empty","findfield_default_text2":"Enter any words","findfield_title_text2":"Enter all or part of a title","findfield_author_text2":"Enter an author\u0027s name"},"clientData":{},"templates":{},"pageScripts":["bundled/jqueryplusui.js","bundled/prototype.js","bundled/underscore.js","bundled/eds/master.js","ep/controller/control/upgradebrowser.js","ep/common/menubar.js","ep/util/searchform.js","ep/jqueryplugins/bididirfixer.js","ep/controller/control/simplefindfieldcontrol.js","bundled/epautocomplete.js"],"relativeRequestPath":"search/basic","sid":"7bc8de05-7749-4e1a-be57-acbcdb944638@sessionmgr198","vid":1}
-</script>
-<script src="http://smallcontent.ebsco-content.com/interfacefiles/14.2.0.66.1/javascript/bundled/ep_boot.js"></script>
-<!--[if lt IE 9]>
-<script src="http://smallcontent.ebsco-content.com/interfacefiles/14.2.0.66.1/javascript/html5shiv/html5.js"></script>
-<![endif]-->
-
-<script>
-
-ep.boot(function() {
-	ep.updateSearchMode();
-	ep.getScreenResolution();
-
-},
-null);
-</script>
-
-
-
+<div class="home-intro animated fadeIn">
 	<h2 class="searching">
 			<span class="selected-databases-caption" >Searching:</span>
       <a href='#' id='discoveryService' data-form="discoverySearchForm" class='disabled' ><span class="customer-label color-p2" >Discovery Service</span></a>
       <a href='#' id='libraryCatalog' data-form="libraryCatalogForm" ><span class="customer-label color-p2" >Library Catalog</span></a>
 			</h2>
 
-      <div id="libraryCatalogForm" class='searchForm'>
+      <div id="libraryCatalogForm" class='home-search-form'>
 
-	<form name="searchform" method="get" action="https://catalog.wmu.se/cgi-bin/koha/opac-search.pl" id="searchform">
+	<form name="libraryCatalogForm" method="get" action="https://catalog.wmu.se/cgi-bin/koha/opac-search.pl" id="catalogSearchform">
 	<fieldset class="find-field-controls">	
 	<div class="find-field-inputs">
 		<div class="find-field-inputs-row">
 		<span class="inputs">	
-	<select name="idx" id="masthead_search" class="dd dd-active">
-        <option value="">Library catalog</option>	
-        <option value="ti">Title</option>	
-        <option value="au">Author</option>	
-        <option value="su">Subject</option>
-	<option value="nb">ISBN</option>	
-        <option value="se">Series</option>
-        <option value="callnum">Call number</option>
-       	</select>
-
-        <input type="text" title="Type search term" id="transl1" name="q" class="left" style="width: 35%; font-size: 111%;">
-	</span>	
+			<select name="idx" class="dd dd-active">
+			<option value="">Keyword</option>	
+			<option value="ti">Title</option>	
+			<option value="au">Author</option>	
+			<option value="su">Subject</option>
+			<option value="nb">ISBN</option>	
+			<option value="se">Series</option>
+			<option value="callnum">Call number</option>
+		  </select>
+      <span style="position: relative; display: inline-block;" class="text-container" id="librarytext_container"> 
+      <input type="text" title="Type search term" id="transl1" name="q" class="left home-searchbox"  placeholder="WMU Library Shelves">
+      </span>	
+    </span>	
 	<span class="find-field-submit">
     		<input type="submit" value="Search" id="searchsubmit" class="button styled-button-c3 rs_preserve">
 	</span>
@@ -63,154 +43,41 @@ null);
       </div>
 	
       
-      <div id="discoverySearchForm" class="searchForm">      
-<form method="post" action="basic?sid=7bc8de05-7749-4e1a-be57-acbcdb944638%40sessionmgr198&amp;vid=1&amp;hid=116" id="aspnetForm">
-<div class="aspNetHidden">
-<input type="hidden" name="RelRequestPath" id="RelRequestPath" value="search/basic" />
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__sid" id="__sid" value="7bc8de05-7749-4e1a-be57-acbcdb944638@sessionmgr198" />
-<input type="hidden" name="__vid" id="__vid" value="1" />
-<input type="hidden" name="__CUSTOMVIEWSTATE" id="__CUSTOMVIEWSTATE" value="H4sIAAAAAAAEAJWSz2/TMBTHVbdeywbLYagTl83VJG5O1myMtkNIaCcOcECwK3JiN7HmH8F2xvrXM9u0WQ8VGhfn6eX58973+/ynl9AE7k9nszyfTy/nF8kYnBzdEsEpcewb+9Uy675oykBvDJYJXR+gF+oGgqgKAqZ8oh8SsBTEWoh/c8pQQSwvUe2kwIUhinJVIaWx4JI7Ziyyd1whRq2/DD1ztAEH0PCWW14IVlMKRiFz2g/hi3XJ5txbPv3rPYUgCRUn0LqVYPAV5bYRZLVQWrFrCg63ICDcAfCY1dq6pdZ+MPT3g4Wu9Pgw6gpUP+M62Nua8+ArueeVd+qHEfBN7VyzyDLbNo02LmWFLXVaapn5mYax/Ofks2PyRrfKgcF41EmJU7xecmMdLnWzMryqnbdK3XWtkhstpbfxk6layZSD2a52QUdsGRVljeH3pFylYQvRmG3/QtchxM/AeD+k3UD6OyDv/wty1kn0uMEOXPpPXKmVI6XLuKLsIW3qJr6MaOGkI6MuiuVc+c0WxOSdn4Pv7MHBl2/Pplfza5SfTy+R5+xvtnwQghGcfJhgjFrLzAIpe/7uKr+YpdLjUv9yEcL4I30E6kzEukMDAAA=" />
-<input type="hidden" name="__ScreenResolution" id="__ScreenResolution" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['aspnetForm'];
-if (!theForm) {
-    theForm = document.aspnetForm;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
+	<div id="discoverySearchForm" class="home-search-form">      
 
 
-		<!--[if lt IE 7]>	
-		
-
-<div class="ie6_req_block">
-	<div class="ie6_req_text">
-		IE6 users please note our browser requirements are changing! See  <a href="http://support.epnet.com/knowledge_base/detail.php?id=25" target="_blank" title="EBSCO's Support Site">EBSCO's Support Site</a>  for more information.
-	</div>
-</div>
-		<![endif]-->
-		
-		<div id="outerContainer">
-			<div id="innerContainer">
-	
-
-							<div class="authorities-menu-bar">
-		
-				
+<form id="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
+		<input id="ebscohosturl" name="ebscohosturl" value="http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=0&amp;mode=bool&amp;lang=en" type="hidden">
+		<input id="ebscohostsearchsrc" name="ebscohostsearchsrc" value="db" type="hidden">
+		<input id="ebscohostsearchmode" name="ebscohostsearchmode" value="+" type="hidden">
+		<input id="ebscohostkeywords" name="ebscohostkeywords" value="" type="hidden">
+ 	<fieldset class="find-field-controls">	
+		<div class="find-field-inputs">
+		<div class="find-field-inputs-row">
+			<span class="inputs">	
+  				<input class="dd-input" id="guidedField_0" name="SearchTag" data-messageid="findfield_default_text2" value="keyword" type="hidden">
 
 
-				
-		
-					<div id="mainContentArea">
-						<div id="content" role="main" class="text-normal">
-							
-	
-	<div id="ctl00_ctl00_MainContentArea_MainContentArea_basicSearch" class="basic-search">
-		
-<section data-id="simpleFindfieldControl" class="find-field-outer branding-Above"
-	id="findFieldOuter" role="search" aria-label="Search" >
-	
-	<div class="find-field-inner " >
-		
-		<fieldset class="find-field-controls" data-auto-complete="{&quot;url&quot;:&quot;http://global.ac.ebsco-content.com/autocomplete/rest/autoComplete&quot;,&quot;queryParams&quot;:{&quot;idx&quot;:&quot;rawqueries&quot;,&quot;filters&quot;:[{&quot;name&quot;:&quot;custid&quot;,&quot;values&quot;:[&quot;ns056238&quot;]}],&quot;max&quot;:10,&quot;token&quot;:&quot;ARB1LXfC6aPzBLfIj/+Gfxi3iKL3UkI1ILyKSKNupOUxNloBPxAulWuFTLaDilQeAEE=&quot;,&quot;format&quot;:&quot;json&quot;},&quot;massageData&quot;:true,&quot;searchOnSelect&quot;:true,&quot;completions&quot;:{&quot;wrap&quot;:false,&quot;truncate&quot;:true}}">
-	<legend class="hidden" >Search</legend>
-	
-		
+				 <select name="SearchTag"  class="dd dd-active">
+					<option value="RadioButtonSearchTag_">Keyword</option>	
+					<option value="RadioButtonSearchTag_TI">Title</option>	
+					<option value="RadioButtonSearchTag_AU">Author</option>	
+					<option value="RadioButtonSearchTag_SU">Subject</option>
+				  </select>
 
 
-
-<div class="find-field-inputs" data-form-submit="" >
-	<div class="find-field-inputs-row">
-	<span class="inputs">
-	<label for="SearchTerm1" class="hidden" >Please enter search term(s).</label>
-
-<div class="dd" data-dropdown="" data-form-submit="" >
-	<button class="dd-active" >
-		<span class="txt">Keyword</span>
-		<div class="transport">
-			<div class="bottom"></div>
-		</div>
-	</button>
-	<ul id="guidedFieldSelectors" class="dd-list">
-				<li class="dd-list-item">
-					<input class="dd-input" type="radio" id="guidedField_0" name="SearchTag" data-messageid="findfield_default_text2" value="RadioButtonSearchTag_" checked=&quot;checked&quot; data-clear="checked" />
-					<label class="dd-label" for="guidedField_0" >Keyword</label>
-				</li>
-				<li class="dd-list-item">
-					<input class="dd-input" type="radio" id="guidedField_1" name="SearchTag" data-messageid="findfield_title_text2" value="RadioButtonSearchTag_TI"  data-clear="" />
-					<label class="dd-label" for="guidedField_1" >Title</label>
-				</li>
-				<li class="dd-list-item">
-					<input class="dd-input" type="radio" id="guidedField_2" name="SearchTag" data-messageid="findfield_author_text2" value="RadioButtonSearchTag_AU"  data-clear="" />
-					<label class="dd-label" for="guidedField_2" >Author</label>
-				</li>
-
-	</ul>
-</div>					<input id="SearchTerm1" name="SearchTerm" type="text"  value="" class="component auto-complete textbox" accesskey="2" 
-				data-searchTextBox = {&quot;AutoSuggestMapId&quot;:&quot;SearchTerm1&quot;}
-					placeholder='Enter any words'
- data-clear="" data-textclear='{ "btnToolTip": "Clear" }' />
-	
-	</span>
+				<span style="position: relative; display: inline-block;" class="text-container" id="ebscohostsearchtext_container"><input id="ebscohostsearchtext" name="ebscohostsearchtext" value="" class="left ltr-text home-searchbox" component="" auto-complete="" textbox="" accesskey="2" data-searchtextbox="{&quot;AutoSuggestMapId&quot;:&quot;SearchTerm1&quot;}" placeholder="E-journals &amp; Ebooks" data-clear="" data-textclear="{ &quot;btnToolTip&quot;: &quot;Clear&quot; }" type="text"><a style="position: absolute; right: auto; top: 20px; left: 270px;" class="clear-button" aria-hidden="true" tabindex="-1" title="Clear" id="ebscohostsearchtext-clear"></a></span>
+	</span>	
 	<span class="find-field-submit">
+		<input id="SearchButton" name="SearchBtn" value="Search" title="Search" class="button styled-button-c3" type="submit">
+	</span>	
 
-		<input id="SearchButton" name="SearchBtn" type="submit"  value="Search" title="Search" class="button styled-button-c3" 
-			   data-formsubmit='{"action":"http://eds.b.ebscohost.com/eds/Search/PerformSearch?sid=7bc8de05-7749-4e1a-be57-acbcdb944638@sessionmgr198&amp;vid=1"}'/>
-				
-		<a  id="helpLink" href="javascript:openWideTip(&#39;http://support.ebsco.com/help/?int=eds&amp;lang=en&amp;feature_id=Basic&amp;TOC_ID=Always&amp;SI=0&amp;BU=0&amp;GU=1&amp;PS=0&amp;ver=&amp;dbs=eric,a9h,wrw,ffw,edsnbk,edslns,edsbl,edsnba,edsgpr,edspvh,edspzh,edselp,edsjls,edspia,edsoai,edsoso,edsibc,edsiec,edsihc,nlebk,edsmer,edskis,edsaan,edscrc,edszbw,nsm,edsind,edslex,edsasp,asx,edo,bsx,edb,edsjpi,edsjst,e000tww,edsupi,edshlc,edsebo,edsdoj,edsper,edspio,edsffr,edsers,edsabc,edsaca,edsssb,edshol,edsgsf,edsgsl,edsoap,edsocd,edsble,edsbio,edscog,edsrec,edsace,edsvox,edscrl,edsrca,edsecd,edslan,edsoro,edshyr,edsbre,edshld,edsgso,edscea,edshst,edsram,edssci,edsrdl,edsbsi,edsebk,edsijc,edscqv,edsgao,edsggo,edsagr,edslib,edsgvr,edscru,edsriv,edsglt,edsgea,edsrbp,edsgbe,edschh,edsjsr,edsrac,edswbo,edstem,edsups,edsswe,edstdx,edspgr,edspap,edsulo&#39;)" title="Search Help">
-			<img alt="Search Help  (opens in new window)" src="http://smallcontent.ebsco-content.com/interfacefiles/14.2.0.66.1/eds/iconQuestionMarkGeneric.png" />
-		</a>
-	</span>
-	<input type="hidden" value= "3" name="PerformSearchSettingValue"/>
+</div>	
+</div>
+</fieldset> 	
+	</form>
+
+
+
 	</div>
 </div>
-
-	
-
-
-
-<ul id="findFieldLinks" >
-		
- <!-- 
-  <li id="optionsItem" class="find-field-link">
-					<a id="options" role="button" title="Search Options" href="" data-collapse-toggle=".limiter-wrapper" >Search Options</a>
-				</li>
--->				<li id="basicItem" class="find-field-link">
-						<span >Basic Search</span>
-				</li>
-				<li id="advancedItem" class="find-field-link">
-						<a id="advanced" title="Advanced Search" 
-						   href="#" data-formsubmit='{"action":"http://eds.b.ebscohost.com/eds/Search/FindFieldLinkRedirect?sid=7bc8de05-7749-4e1a-be57-acbcdb944638@sessionmgr198&amp;vid=1&amp;theSearchType=Advanced&amp;ReturnUrl=%252feds%252fsearch%252fbasic%253fsid%253d7bc8de05-7749-4e1a-be57-acbcdb944638%252540sessionmgr198%2526vid%253d1%2526hid%253d116"}' >Advanced Search</a>
-				</li>
-				<li id="historyItem" class="find-field-link">
-						<a id="history" title="Search History" 
-							href="#" data-formsubmit='{"action":"http://eds.b.ebscohost.com/eds/Search/FindFieldLinkRedirect?sid=7bc8de05-7749-4e1a-be57-acbcdb944638@sessionmgr198&amp;vid=1&amp;theSearchType=SearchHistory&amp;ReturnUrl=%252feds%252fsearch%252fbasic%253fsid%253d7bc8de05-7749-4e1a-be57-acbcdb944638%252540sessionmgr198%2526vid%253d1%2526hid%253d116"}'
-							class="" >
-							Search History
-						</a>
-				</li>
-</ul>
-	
-		
-</fieldset> 	
-
-			</div>
-</section>
-
-
-	</form>
-</div>
-
